@@ -1,0 +1,12 @@
+.htmlpage{
+    background:
+  radial-gradient(circle at 75.3% 50%,
+    rgba(0,255,0,.5),
+    rgba(0,255,0,0) 70.71%) beige;
+    padding: 2rem;
+
+}
+.err{
+  font-size: small;
+  color:red
+}

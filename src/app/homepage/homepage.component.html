@@ -1,0 +1,10 @@
+<html>
+  <button (click)="c1()" class="btn">POPULATION DATA CHART</button>
+  <button (click)="c2()" class="btn">STOCK MARKET DATA CHART</button>
+  <div *ngIf=d1 class="chart">
+    <app-stackbarchart></app-stackbarchart>
+  </div>
+  <div *ngIf=d2 class="chart">
+    <app-mainpage></app-mainpage>
+  </div>
+</html>

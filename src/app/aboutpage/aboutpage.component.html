@@ -1,0 +1,23 @@
+<div class="htmlpage">
+    <h1>HELLO! Our Valuable Customer</h1>
+    <h2>Incase of Any Quries kindly send Us a Mail</h2>
+    <div >
+        <form  [formGroup]="contactform" style="text-align: left;line-height:60px;border-radius:30px;padding:50px;">
+            <h2 style="text-align: left;font-size:1.5rem;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Leave your Comments</h2>
+            <div class="form-group">
+                <label for="username" style="text-align: left;font-size:1.2rem;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+                    USERNAME * :
+                <input type="text" style="width:10em" class="form-control" formControlName="username" id="username" autocomplete pTooltip="Enter Username" placeholder="Enter your username">
+                <div class="err" *ngIf="contactform.get('username')?.invalid && contactform.get('username')?.touched"  style="width:13rem;border-radius:25px;" >* USERNAME IS REQUIRED</div></label>
+            </div>
+            <div class="form-group">
+                <label for="message" style="text-align: left;font-size:1.2rem;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+                    YOUR COMMENT * :
+                <input type="text"style="width:20em" class="form-control" formControlName="message" id="message" autocomplete="off" pTooltip="Enter your message" placeholder="Enter the Message">
+                <div class="err" *ngIf="contactform.get('message')?.invalid && contactform.get('message')?.touched" >* MESSAGE  IS REQUIRED</div></label>
+            </div>
+            <button class="btn btn-success" [disabled]="contactform.invalid"  style="width:6rem;border-radius:25px" (click)="submit();" >SEND</button>
+            <button class="btn btn-danger" style="width:6rem;border-radius:25px" (click)="register()" >CLEAR</button>
+        </form>
+    </div>
+</div>
